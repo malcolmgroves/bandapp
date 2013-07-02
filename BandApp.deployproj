@@ -1,0 +1,466 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Import Condition="Exists('$(BDS)\bin\CodeGear.Deployment.targets')" Project="$(BDS)\bin\CodeGear.Deployment.targets"/>
+    <ProjectExtensions>
+        <ProjectFileVersion>12</ProjectFileVersion>
+    </ProjectExtensions>
+    <ItemGroup Condition="'$(Platform)'=='iOSDevice'">
+        <DeployFile Include="iOSDevice\Base\BandApp" Condition="'$(Config)'=='Base'">
+            <RemoteDir>BandApp.app\</RemoteDir>
+            <RemoteName>BandApp</RemoteName>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="images\question.png">
+            <RemoteDir>BandApp.app\StartUp\Library\</RemoteDir>
+            <RemoteName>question.png</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="iOSDevice\Base\ResourceRules.plist" Condition="'$(Config)'=='Base'">
+            <RemoteDir>BandApp.app\</RemoteDir>
+            <RemoteName>ResourceRules.plist</RemoteName>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="images\calendar.png">
+            <RemoteDir>BandApp.app\StartUp\Library\</RemoteDir>
+            <RemoteName>calendar.png</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="images\AboutTab2.jpg">
+            <RemoteDir>BandApp.app\StartUp\Library\</RemoteDir>
+            <RemoteName>AboutTab2.jpg</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="images\AboutTab4.jpg">
+            <RemoteDir>BandApp.app\StartUp\Library\</RemoteDir>
+            <RemoteName>AboutTab4.jpg</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="iOSDevice\Debug\BandApp.entitlements" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>BandApp.app\</RemoteDir>
+            <RemoteName>Entitlements.plist</RemoteName>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="iOSDevice\Base\BandApp.info.plist" Condition="'$(Config)'=='Base'">
+            <RemoteDir>BandApp.app\</RemoteDir>
+            <RemoteName>Info.plist</RemoteName>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="images\AboutTab3.jpg">
+            <RemoteDir>BandApp.app\StartUp\Library\</RemoteDir>
+            <RemoteName>AboutTab3.jpg</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="images\AboutTab5.jpg">
+            <RemoteDir>BandApp.app\StartUp\Library\</RemoteDir>
+            <RemoteName>AboutTab5.jpg</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="iOSDevice\Base\BandApp.entitlements" Condition="'$(Config)'=='Base'">
+            <RemoteDir>BandApp.app\</RemoteDir>
+            <RemoteName>Entitlements.plist</RemoteName>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="images\film.png">
+            <RemoteDir>BandApp.app\StartUp\Library\</RemoteDir>
+            <RemoteName>film.png</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="iOSDevice\Debug\BandApp.dSYM" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>$(PROJECTNAME).app.dSYM\Contents\Resources\DWARF\</RemoteDir>
+            <RemoteName>BandApp</RemoteName>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="config.ini">
+            <RemoteDir>BandApp.app\StartUp\Library\</RemoteDir>
+            <RemoteName>config.ini</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="images\AboutTab1.jpg">
+            <RemoteDir>BandApp.app\StartUp\Library\</RemoteDir>
+            <RemoteName>AboutTab1.jpg</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="iOSDevice\Debug\BandApp" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>BandApp.app\</RemoteDir>
+            <RemoteName>BandApp</RemoteName>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="iOSDevice\Debug\BandApp.info.plist" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>BandApp.app\</RemoteDir>
+            <RemoteName>Info.plist</RemoteName>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="iOSDevice\Base\BandApp.dSYM" Condition="'$(Config)'=='Base'">
+            <RemoteDir>$(PROJECTNAME).app.dSYM\Contents\Resources\DWARF\</RemoteDir>
+            <RemoteName>BandApp</RemoteName>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="images\newspaper.png">
+            <RemoteDir>BandApp.app\StartUp\Library\</RemoteDir>
+            <RemoteName>newspaper.png</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="iOSDevice\Debug\ResourceRules.plist" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>BandApp.app\</RemoteDir>
+            <RemoteName>ResourceRules.plist</RemoteName>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="images\administrator.png">
+            <RemoteDir>BandApp.app\StartUp\Library\</RemoteDir>
+            <RemoteName>administrator.png</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+    </ItemGroup>
+    <ItemGroup Condition="'$(Platform)'=='Win32'">
+        <DeployFile Include="images\question.png">
+            <RemoteDir>BandApp\</RemoteDir>
+            <RemoteName>question.png</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="images\calendar.png">
+            <RemoteDir>BandApp\</RemoteDir>
+            <RemoteName>calendar.png</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="images\AboutTab2.jpg">
+            <RemoteDir>BandApp\</RemoteDir>
+            <RemoteName>AboutTab2.jpg</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="images\AboutTab4.jpg">
+            <RemoteDir>BandApp\</RemoteDir>
+            <RemoteName>AboutTab4.jpg</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="images\AboutTab3.jpg">
+            <RemoteDir>BandApp\</RemoteDir>
+            <RemoteName>AboutTab3.jpg</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="images\AboutTab5.jpg">
+            <RemoteDir>BandApp\</RemoteDir>
+            <RemoteName>AboutTab5.jpg</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="images\film.png">
+            <RemoteDir>BandApp\</RemoteDir>
+            <RemoteName>film.png</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="config.ini">
+            <RemoteDir>BandApp\</RemoteDir>
+            <RemoteName>config.ini</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="images\AboutTab1.jpg">
+            <RemoteDir>BandApp\</RemoteDir>
+            <RemoteName>AboutTab1.jpg</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="images\newspaper.png">
+            <RemoteDir>BandApp\</RemoteDir>
+            <RemoteName>newspaper.png</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="images\administrator.png">
+            <RemoteDir>BandApp\</RemoteDir>
+            <RemoteName>administrator.png</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+    </ItemGroup>
+    <ItemGroup Condition="'$(Platform)'=='Win64'"/>
+    <ItemGroup Condition="'$(Platform)'=='OSX32'">
+        <DeployFile Include="$(BDS)\Redist\osx32\libcgunwind.1.0.dylib">
+            <RemoteDir>BandApp.app\Contents\MacOS\</RemoteDir>
+            <RemoteName>libcgunwind.1.0.dylib</RemoteName>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+    </ItemGroup>
+    <ItemGroup Condition="'$(Platform)'=='iOSSimulator'">
+        <DeployFile Include="Z:\code\repos\private\bandapp\images\72.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>BandApp.app\</RemoteDir>
+            <RemoteName>72.png</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="images\question.png">
+            <RemoteDir>BandApp.app\StartUp\Library\</RemoteDir>
+            <RemoteName>question.png</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="Z:\code\repos\private\bandapp\images\768x1004.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>BandApp.app\</RemoteDir>
+            <RemoteName>Default-Portrait~ipad.png</RemoteName>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="Z:\code\repos\private\bandapp\images\1536x2008.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>BandApp.app\</RemoteDir>
+            <RemoteName>Default-Portrait@2x~ipad.png</RemoteName>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="Z:\code\repos\private\bandapp\images\2048x1496.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>BandApp.app\</RemoteDir>
+            <RemoteName>Default-Landscape@2x~ipad.png</RemoteName>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="iOSSimulator\Debug\BandApp.info.plist" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>BandApp.app\</RemoteDir>
+            <RemoteName>Info.plist</RemoteName>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="Z:\code\repos\private\bandapp\images\58.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>BandApp.app\</RemoteDir>
+            <RemoteName>58.png</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="images\calendar.png">
+            <RemoteDir>BandApp.app\StartUp\Library\</RemoteDir>
+            <RemoteName>calendar.png</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="images\AboutTab2.jpg">
+            <RemoteDir>BandApp.app\StartUp\Library\</RemoteDir>
+            <RemoteName>AboutTab2.jpg</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="Z:\code\repos\private\bandapp\images\1024x748.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>BandApp.app\</RemoteDir>
+            <RemoteName>Default-Landscape~ipad.png</RemoteName>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="Z:\code\repos\private\bandapp\images\640x960.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>BandApp.app\</RemoteDir>
+            <RemoteName>Default@2x.png</RemoteName>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="images\AboutTab4.jpg">
+            <RemoteDir>BandApp.app\StartUp\Library\</RemoteDir>
+            <RemoteName>AboutTab4.jpg</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\Redist\osx32\libcgunwind.1.0.dylib">
+            <RemoteDir>BandApp.app\</RemoteDir>
+            <RemoteName>libcgunwind.1.0.dylib</RemoteName>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="Z:\code\repos\private\bandapp\images\144.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>BandApp.app\</RemoteDir>
+            <RemoteName>144.png</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="Z:\code\repos\private\bandapp\images\50.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>BandApp.app\</RemoteDir>
+            <RemoteName>50.png</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="images\AboutTab3.jpg">
+            <RemoteDir>BandApp.app\StartUp\Library\</RemoteDir>
+            <RemoteName>AboutTab3.jpg</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="images\AboutTab5.jpg">
+            <RemoteDir>BandApp.app\StartUp\Library\</RemoteDir>
+            <RemoteName>AboutTab5.jpg</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="images\film.png">
+            <RemoteDir>BandApp.app\StartUp\Library\</RemoteDir>
+            <RemoteName>film.png</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="iOSSimulator\Debug\BandApp.rsm" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>BandApp.app\</RemoteDir>
+            <RemoteName>BandApp.rsm</RemoteName>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="Z:\code\repos\private\bandapp\images\320x480.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>BandApp.app\</RemoteDir>
+            <RemoteName>Default.png</RemoteName>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="Z:\code\repos\private\bandapp\images\100.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>BandApp.app\</RemoteDir>
+            <RemoteName>100.png</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="config.ini">
+            <RemoteDir>BandApp.app\StartUp\Library\</RemoteDir>
+            <RemoteName>config.ini</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="images\AboutTab1.jpg">
+            <RemoteDir>BandApp.app\StartUp\Library\</RemoteDir>
+            <RemoteName>AboutTab1.jpg</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="iOSSimulator\Debug\BandApp" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>BandApp.app\</RemoteDir>
+            <RemoteName>BandApp</RemoteName>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="Z:\code\repos\private\bandapp\images\640x1136.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>BandApp.app\</RemoteDir>
+            <RemoteName>Default-568h@2x.png</RemoteName>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="Z:\code\repos\private\bandapp\images\57.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>BandApp.app\</RemoteDir>
+            <RemoteName>57.png</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="images\newspaper.png">
+            <RemoteDir>BandApp.app\StartUp\Library\</RemoteDir>
+            <RemoteName>newspaper.png</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="Z:\code\repos\private\bandapp\images\114.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>BandApp.app\</RemoteDir>
+            <RemoteName>114.png</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="Z:\code\repos\private\bandapp\images\29.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>BandApp.app\</RemoteDir>
+            <RemoteName>29.png</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="images\administrator.png">
+            <RemoteDir>BandApp.app\StartUp\Library\</RemoteDir>
+            <RemoteName>administrator.png</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+        <DeployFile Include="iOSSimulator\Debug\BandApp.entitlements" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>BandApp.app\</RemoteDir>
+            <RemoteName>Entitlements.plist</RemoteName>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+        </DeployFile>
+    </ItemGroup>
+</Project>

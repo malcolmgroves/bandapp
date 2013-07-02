@@ -1,0 +1,124 @@
+object VimeoFeedPage: TVimeoFeedPage
+  Height = 522.000000000000000000
+  Width = 451.000000000000000000
+  object Panel1: TPanel
+    Align = alClient
+    Height = 522.000000000000000000
+    Width = 451.000000000000000000
+    TabOrder = 0
+    object ListBox1: TListBox
+      Align = alClient
+      Height = 522.000000000000000000
+      StyleLookup = 'transparentlistboxstyle'
+      TabOrder = 0
+      Width = 451.000000000000000000
+      ItemIndex = 0
+      ItemHeight = 220.000000000000000000
+      DefaultItemStyles.ItemStyle = 'newvideoitemstyle'
+      DefaultItemStyles.GroupHeaderStyle = ''
+      DefaultItemStyles.GroupFooterStyle = ''
+    end
+  end
+  object IdHTTP1: TIdHTTP
+    AllowCookies = True
+    ProxyParams.BasicAuthentication = False
+    ProxyParams.ProxyPort = 0
+    Request.ContentLength = -1
+    Request.ContentRangeEnd = -1
+    Request.ContentRangeStart = -1
+    Request.ContentRangeInstanceLength = -1
+    Request.Accept = 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    Request.BasicAuthentication = False
+    Request.UserAgent = 'Mozilla/3.0 (compatible; Indy Library)'
+    Request.Ranges.Units = 'bytes'
+    Request.Ranges = <>
+    HTTPOptions = [hoForceEncodeParams]
+    Left = 32
+    Top = 240
+  end
+  object XMLDocument1: TXMLDocument
+    Left = 136
+    Top = 240
+    DOMVendorDesc = 'ADOM XML v4'
+  end
+  object ActionList1: TActionList
+    Left = 392
+    Top = 248
+    object actShare: TShowShareSheetAction
+      Category = 'Media Library'
+      CustomText = 'Share...'
+      OnBeforeExecute = actShareBeforeExecute
+    end
+    object actPlayVideo: TAction
+      Text = 'actPlayVideo'
+      OnExecute = actPlayVideoExecute
+    end
+  end
+  object PrototypeBindSource1: TPrototypeBindSource
+    AutoActivate = True
+    AutoPost = False
+    FieldDefs = <
+      item
+        Name = 'Title'
+        Generator = 'LoremIpsum'
+        ReadOnly = False
+      end
+      item
+        Name = 'Description'
+        Generator = 'LoremIpsum'
+        ReadOnly = False
+      end
+      item
+        Name = 'URL'
+        Generator = 'LoremIpsum'
+        ReadOnly = False
+      end
+      item
+        Name = 'ThumbnailBitmap'
+        FieldType = ftBitmap
+        Generator = 'ContactBitmaps'
+        ReadOnly = False
+      end>
+    ScopeMappings = <>
+    OnCreateAdapter = PrototypeBindSource1CreateAdapter
+    Left = 248
+    Top = 240
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 20
+    Top = 5
+    object LinkListControlToField1: TLinkListControlToField
+      Category = 'Quick Bindings'
+      DataSource = PrototypeBindSource1
+      FieldName = 'Title'
+      Control = ListBox1
+      FillExpressions = <
+        item
+          SourceMemberName = 'Title'
+          ControlMemberName = 'StylesData['#39'title'#39']'
+        end
+        item
+          SourceMemberName = 'Description'
+          ControlMemberName = 'StylesData["description"]'
+        end
+        item
+          SourceMemberName = 'URL'
+          ControlMemberName = 'StylesData["sharebutton.TagString"]'
+        end
+        item
+          SourceMemberName = 'ThumbnailBitmap'
+          ControlMemberName = 'StylesData["thumbnailimage.Bitmap"]'
+        end
+        item
+          SourceMemberName = 'URL'
+          ControlMemberName = 'StylesData["playbutton.TagString"]'
+        end>
+      AutoBufferCount = False
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+      OnFilledListItem = LinkListControlToField1FilledListItem
+    end
+  end
+end
